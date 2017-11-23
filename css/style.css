@@ -1,3 +1,9 @@
-.red {
-    background-color: red;
+.main_picture {
+    text-align: center;
+}
+
+.magan {
+    width: 300px;
+    height: auto;
+    overflow: hidden;
 }
