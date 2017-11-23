@@ -1,5 +1,6 @@
-function flirt() {
-    alert("Girrr you are HOT!");
-}
+/*jslint devel: true */
 
-flirt();
+//execute the function once after brower downloaded all the files 
+window.onload = function () {
+    alert("Girrr you are HOT!");
+};
