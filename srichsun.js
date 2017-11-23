@@ -1,1 +1,5 @@
-alert("This is JS!");
+function flirt() {
+    alert("Girrr you are HOT!");
+}
+
+flirt();
