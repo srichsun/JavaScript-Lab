@@ -10,11 +10,12 @@ window.onload = function () {
 
     function changeToCatwalk() {
         this.src = "https://pbs.twimg.com/media/CGsNYMLWoAAcOYQ.jpg:large";
-        //this 就是滑鼠指到的物件
+        //this 就是滑鼠指到的物件, 放在function裡面
     }
 
-    document.getElementById("kateupton").onmouseover = changeToBikini;
-    document.getElementById("kateupton").onmouseout = changeToCatwalk;
+    var kateupon_pic = document.getElementById("kateupton");
+    kateupon_pic.onmouseover = changeToBikini;
+    kateupon_pic.onmouseout = changeToCatwalk;
     // 觸發function不用加()
 
 };
