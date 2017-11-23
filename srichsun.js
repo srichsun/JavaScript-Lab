@@ -5,15 +5,16 @@
 window.onload = function () {
 
     function changeToBikini() {
-        document.getElementById("kateupton").src = "http://s3.india.com/travel/wp-content/uploads/2016/05/Kate-Upton-main.jpg";
+        this.src = "http://s3.india.com/travel/wp-content/uploads/2016/05/Kate-Upton-main.jpg";
     }
 
     function changeToCatwalk() {
-        document.getElementById("kateupton").src = "https://pbs.twimg.com/media/CGsNYMLWoAAcOYQ.jpg:large";
+        this.src = "https://pbs.twimg.com/media/CGsNYMLWoAAcOYQ.jpg:large";
+        //this 就是滑鼠指到的物件
     }
 
     document.getElementById("kateupton").onmouseover = changeToBikini;
     document.getElementById("kateupton").onmouseout = changeToCatwalk;
-    //    觸發function不用加()
+    // 觸發function不用加()
 
 };
