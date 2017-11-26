@@ -9,7 +9,7 @@ window.onload = function () {
         if (n === 7) {
             n = 1;
         }
-        pic.src = "images/" + n + ".jpg";
+        pic.src = "images/number_" + n + ".jpg";
         n = n + 1;
     }
 
@@ -22,7 +22,25 @@ window.onload = function () {
         clearInterval(changing);
     }
 
-    document.getElementById("start").onclick = START;
-    document.getElementById("stop").onclick = STOP;
+    function PREVIOUS() {
+        if (n === 1) {
+            n = 7;
+        }
+        n = n - 1;
+        pic.src = "images/number_" + n + ".jpg";
+    }
+
+    function NEXT() {
+        if (n === 6) {
+            n = 0;
+        }
+        n = n + 1;
+        pic.src = "images/number_" + n + ".jpg";
+    }
+    document.getElementById("image").onmouseover = START;
+    document.getElementById("image").onmouseout = STOP;
+
+    document.getElementById("previous").onclick = PREVIOUS;
+    document.getElementById("next").onclick = NEXT;
 
 };
