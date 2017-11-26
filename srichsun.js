@@ -2,13 +2,16 @@ window.onload = function () {
 
     var n = 1;
 
+    var pic = document.getElementById("image");
+
     function changepic() {
         if (n === 7) {
             n = 1;
         }
-        this.src = "images/" + n + ".jpg";
+        pic.src = "images/" + n + ".jpg";
         n = n + 1;
     }
 
-    document.getElementById("image").onclick = changepic;
+
+    setInterval(changepic, 1000);
 };
