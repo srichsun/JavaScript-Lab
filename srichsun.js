@@ -10,8 +10,8 @@ window.onload = function () {
         }
         pic.src = "images/" + n + ".jpg";
         n = n + 1;
+        setTimeout(changepic, 1000);
     }
 
-
-    setTimeout(changepic, 1000);
+    changepic();
 };
