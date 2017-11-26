@@ -1,46 +1,34 @@
 window.onload = function () {
 
-    var n = 1,
-        pic = document.getElementById("image"),
-        changing = 0;
+    var n = 0;
 
-
-    function changepic() {
-        if (n === 7) {
-            n = 1;
+    function changpic() {
+        switch (this.id) {
+            case "first":
+                n = 1;
+                break;
+            case "second":
+                n = 2;
+                break;
+            case "third":
+                n = 3;
+                break;
+            case "fourth":
+                n = 4;
+                break;
+            case "fifth":
+                n = 5;
+                break;
         }
-        pic.src = "images/number_" + n + ".jpg";
-        n = n + 1;
+
+        document.getElementById("image").src = "images/number_" + n + ".jpg";
+
+        return false;
     }
 
-    function START() {
-        clearInterval(changing);
-        changing = setInterval(changepic, 500);
-    }
-
-    function STOP() {
-        clearInterval(changing);
-    }
-
-    function PREVIOUS() {
-        if (n === 1) {
-            n = 7;
-        }
-        n = n - 1;
-        pic.src = "images/number_" + n + ".jpg";
-    }
-
-    function NEXT() {
-        if (n === 6) {
-            n = 0;
-        }
-        n = n + 1;
-        pic.src = "images/number_" + n + ".jpg";
-    }
-    document.getElementById("image").onmouseover = START;
-    document.getElementById("image").onmouseout = STOP;
-
-    document.getElementById("previous").onclick = PREVIOUS;
-    document.getElementById("next").onclick = NEXT;
-
+    document.getElementById("first").onclick = changpic;
+    document.getElementById("second").onclick = changpic;
+    document.getElementById("third").onclick = changpic;
+    document.getElementById("fourth").onclick = changpic;
+    document.getElementById("fifth").onclick = changpic;
 };
