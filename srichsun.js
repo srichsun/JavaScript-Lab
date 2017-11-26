@@ -1,14 +1,10 @@
 window.onload = function () {
 
 
-    function becomesmall() {
-        document.getElementById("text").style.fontSize = "5px";
+    function show() {
+        document.getElementById("box" + this.id.substr(3)).style.display = "block";
     }
-
-    function becomehuge() {
-        document.getElementById("text").style.fontSize = "50px";
-    }
-
-    document.getElementById("small").onclick = becomesmall;
-    document.getElementById("big").onclick = becomehuge;
+    document.getElementById("get1").onclick = show;
+    document.getElementById("get2").onclick = show;
+    document.getElementById("get3").onclick = show;
 };

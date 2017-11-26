@@ -46,3 +46,8 @@ img {
 p {
     width: 30%;
 }
+
+[id*=box] {
+    background-color: aquamarine;
+    display: none;
+}
