@@ -1,8 +1,9 @@
 window.onload = function () {
 
-    var n = 1;
+    var n = 1,
+        pic = document.getElementById("image"),
+        changing = 0;
 
-    var pic = document.getElementById("image");
 
     function changepic() {
         if (n === 7) {
@@ -10,8 +11,17 @@ window.onload = function () {
         }
         pic.src = "images/" + n + ".jpg";
         n = n + 1;
-        setTimeout(changepic, 1000);
     }
 
-    changepic();
+    function START() {
+        changing = setInterval(changepic, 500);
+    }
+
+    function STOP() {
+        clearInterval(changing);
+    }
+
+    document.getElementById("start").onclick = START;
+    document.getElementById("stop").onclick = STOP;
+
 };
