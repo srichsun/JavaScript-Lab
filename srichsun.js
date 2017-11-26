@@ -2,7 +2,7 @@ window.onload = function () {
 
     var n = 0;
 
-    function changpic() {
+    function changpic(a) {
         switch (this.id) {
             case "first":
                 n = 1;
@@ -23,7 +23,7 @@ window.onload = function () {
 
         document.getElementById("image").src = "images/number_" + n + ".jpg";
 
-        return false;
+        a.preventDefault();
     }
 
     document.getElementById("first").onclick = changpic;
