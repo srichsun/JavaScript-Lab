@@ -15,8 +15,15 @@ window.onload = function () {
         }
     }
 
+    function resumeText() {
+        textarea.innerHTML = "Do you mean......";
+    }
+
     document.getElementById("first_pic").onmouseover = changeText;
     document.getElementById("second_pic").onmouseover = changeText;
     document.getElementById("third_pic").onmouseover = changeText;
+    document.getElementById("first_pic").onmouseout = resumeText;
+    document.getElementById("second_pic").onmouseout = resumeText;
+    document.getElementById("third_pic").onmouseout = resumeText;
 
 };
