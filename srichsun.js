@@ -3,32 +3,16 @@ window.onload = function () {
     var n = 0;
 
     function changpic(a) {
-        switch (this.id) {
-            case "first":
-                n = 1;
-                break;
-            case "second":
-                n = 2;
-                break;
-            case "third":
-                n = 3;
-                break;
-            case "fourth":
-                n = 4;
-                break;
-            case "fifth":
-                n = 5;
-                break;
-        }
 
-        document.getElementById("image").src = "images/number_" + n + ".jpg";
+        var number = this.id.substr(8);
+        document.getElementById("image").src = "images/number_" + number + ".jpg";
 
         a.preventDefault();
     }
 
-    document.getElementById("first").onclick = changpic;
-    document.getElementById("second").onclick = changpic;
-    document.getElementById("third").onclick = changpic;
-    document.getElementById("fourth").onclick = changpic;
-    document.getElementById("fifth").onclick = changpic;
+    document.getElementById("picture_1").onclick = changpic;
+    document.getElementById("picture_2").onclick = changpic;
+    document.getElementById("picture_3").onclick = changpic;
+    document.getElementById("picture_4").onclick = changpic;
+    document.getElementById("picture_5").onclick = changpic;
 };
