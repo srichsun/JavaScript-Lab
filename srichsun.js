@@ -14,6 +14,7 @@ window.onload = function () {
     }
 
     function START() {
+        clearInterval(changing);
         changing = setInterval(changepic, 500);
     }
 
