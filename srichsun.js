@@ -1,29 +1,14 @@
-/*jslint devel: true */
-
-
 window.onload = function () {
 
-    var textarea = document.getElementById("text_box");
+    var n = 1;
 
-    function changeText() {
-        if (this.id === "first_pic") {
-            textarea.innerHTML = "being together?";
-        } else if (this.id === "second_pic") {
-            textarea.innerHTML = "come to my home tonight?";
-        } else {
-            textarea.innerHTML = "go to travel together?";
+    function changepic() {
+        if (n === 7) {
+            n = 1;
         }
+        this.src = "images/" + n + ".jpg";
+        n = n + 1;
     }
 
-    function resumeText() {
-        textarea.innerHTML = "Do you mean......";
-    }
-
-    document.getElementById("first_pic").onmouseover = changeText;
-    document.getElementById("second_pic").onmouseover = changeText;
-    document.getElementById("third_pic").onmouseover = changeText;
-    document.getElementById("first_pic").onmouseout = resumeText;
-    document.getElementById("second_pic").onmouseout = resumeText;
-    document.getElementById("third_pic").onmouseout = resumeText;
-
+    document.getElementById("image").onclick = changepic;
 };
