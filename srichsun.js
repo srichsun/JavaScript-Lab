@@ -13,5 +13,5 @@ window.onload = function () {
     }
 
 
-    setInterval(changepic, 1000);
+    setTimeout(changepic, 1000);
 };
