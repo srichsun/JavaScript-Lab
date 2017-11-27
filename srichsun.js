@@ -1,16 +1,28 @@
 window.onload = function () {
 
-    var target = document.getElementById("colorPLACE");
+    var target = document.getElementById("numnum"),
+        girl = document.getElementById("girl"),
+        n = 0;
 
-    function darktheme() {
-        target.className = "dark-bg";
+    function show() {
+        target.style.display = "block";
     }
 
-    function lighttheme() {
-        target.className = "light-bg";
+    function hide() {
+        target.style.display = "";
     }
 
-    target.onmouseover = darktheme;
-    target.onmouseout = lighttheme;
+    function addup() {
+        if (n === 6) {
+            n = 0;
+        }
+        n = n + 1;
+        target.innerHTML = n;
+        girl.src = "images/" + n + ".jpg";
+    }
+
+    girl.onmouseover = show;
+    girl.onmouseout = hide;
+    girl.onclick = addup;
 
 };

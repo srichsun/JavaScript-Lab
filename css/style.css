@@ -4,10 +4,6 @@
     }
 }
 
-/*最外面那層的寬度是如果是div，是自動100%跟body一樣嗎？*/
-
-/*還是是看裡面元素撐起來的大小???*/
-
 .container {
     margin: 0 auto;
 
@@ -40,7 +36,7 @@
 }
 
 img {
-    width: 300px;
+    /*    width: 300px;*/
 }
 
 p {
@@ -61,4 +57,15 @@ p {
 .light-bg {
     color: darkblue;
     background-color: aquamarine;
+}
+
+.shownum {
+    display: none;
+    text-align: center;
+    font-size: 60px;
+    background-color: limegreen;
+    opacity: 0.5;
+    position: relative;
+    top: -90px;
+
 }
