@@ -51,3 +51,14 @@ p {
     background-color: aquamarine;
     display: none;
 }
+
+.dark-bg {
+    color: white;
+    background-color: black;
+}
+
+
+.light-bg {
+    color: darkblue;
+    background-color: aquamarine;
+}
