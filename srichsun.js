@@ -1,8 +1,6 @@
 $(function () {
 
-    function sayit() {
-        alert("Kick you ass!");
-    }
-
-    $(".damncolor").on("click", sayit);
+    $(".damncolor").click(function () {
+    alert("Kick your aAAAAAss!");
+});
 });
