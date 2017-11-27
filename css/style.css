@@ -77,3 +77,45 @@ p {
     padding: 10px;
     color: brown;
 }
+
+nav {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.hideare {
+    position: relative;
+}
+
+#sportbutton,
+#menbutton,
+#womanbutton {
+    background-color: aquamarine;
+    margin: 0 10px;
+    padding: 10px 50px;
+    font-size: 20px;
+
+}
+
+#sport,
+#men,
+#woman {
+    display: none;
+    position: absolute;
+    top: 50px;
+}
+
+#sport {
+    background-color: brown;
+    width: 100%;
+}
+
+#men {
+    background-color: blue;
+    width: 100%;
+}
+
+#woman {
+    background-color: coral;
+    width: 100%;
+}
